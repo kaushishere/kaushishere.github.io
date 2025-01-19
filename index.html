@@ -23,6 +23,12 @@
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Nebraska" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
 </head>
+	<script>
+		// Redirect to login.html if the user is not signed in
+		if (!sessionStorage.getItem("isAuthenticated")) {
+			window.location.href = "login.html";
+		}
+	</script>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
