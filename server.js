@@ -30,7 +30,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Example protected route
-app.get("/protected", (req, res) => {
+app.get("/login", (req, res) => {
   const token = req.headers["authorization"];
   if (!token) return res.status(403).json({ message: "Token required" });
 
