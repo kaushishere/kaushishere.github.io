@@ -16,7 +16,7 @@ async function handleLogin(event) {
 
   try {
     // Send login request to the backend
-    const response = await fetch("https://your-backend-service.com/login", {
+    const response = await fetch("https://myfamilytree.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -42,7 +42,7 @@ async function handleLogin(event) {
 // Example of making an authenticated request
 async function fetchProtectedResource() {
   const token = sessionStorage.getItem("authToken");
-  const response = await fetch("https://your-backend-service.com/protected", {
+  const response = await fetch("https://myfamilytree.onrender.com/protected", {
     headers: { Authorization: token },
   });
 
